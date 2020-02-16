@@ -1,0 +1,19 @@
+{
+  "name": "colheta-binary",
+  "version": "1.0.0",
+  "description": "projeto para coletar dados de cotação da binary.com para usar em IA",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js -- -ENODE_ENV=dev",
+    "prd": "pm2 start src/index.js --name coleta-binary --log app.log --time -- -ENODE_ENV=prd"
+  },
+  "author": "Daniel Hermenegildo Gimenez",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
